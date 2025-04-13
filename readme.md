@@ -4,4 +4,4 @@ Verwende das Programm wie folgt. Starte das Bash-Script statrt-webserver.sh, es 
 
 <video src="readme-media/sponsoren-small.mp4" controls autoplay loop muted style="max-width: 100%; border-radius: 8px;"></video>
 
-[Video anzeigen (MP4)](media/sponsoren-small.mp4)
+[Video anzeigen (MP4)](readme-media/sponsoren-small.mp4)
