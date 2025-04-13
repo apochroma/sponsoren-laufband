@@ -1,0 +1,23 @@
+{
+  "gold": [
+    "akb.png"
+    ,"breitband.png"
+    ,"helvetia.png"
+    ,"reha.png"
+    ,"rheinfelden.png"
+    ,"soleuno.png"
+  ],
+  "silver": [
+    "gzf.png"
+    ,"haesler.png"
+    ,"ruther.png"
+    ,"eventsponsor.jpg"
+  ],
+  "bronze": [
+    "feldschloesschen.png"
+    ,"waldmeier.png"
+    ,"huerbin.jpg"
+    ,"mundart.jpg"
+    ,"schuetzen.jpg"
+  ]
+}

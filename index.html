@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Greenscreen Logo-Scroller</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div class="config-trigger" onmouseenter="showPanel()"></div>
+
+  <div class="config-panel hidden" onmouseleave="hidePanel()">
+    <h3>Einstellungen</h3>
+    <label>Geschwindigkeit (schneller ← → langsamer): <span id="speedValue">5s</span>
+      <input type="range" id="speedSlider" min="5" max="30" step="1" value="5"
+         oninput="document.getElementById('speedValue').textContent = this.value + 's'; updateStylesFromUI()">
+    </label>
+
+    <label>Start-Verzögerung (z.B. 2s):
+      <input type="text" id="delay" onchange="updateStylesFromUI()">
+    </label>
+    <label>Abstand zwischen Logos (z.B. 50):
+      <input type="number" id="gap" onchange="updateStylesFromUI()">
+    </label>
+    <button onclick="saveConfig()">Speichern</button>
+    <button onclick="document.getElementById('configLoader').click()">Konfiguration laden…</button>
+    <input type="file" id="configLoader" accept="application/json" style="display: none" onchange="loadLocalConfig(event)">
+  </div>
+
+<div class="scrollband">
+  <!-- Wird dynamisch befüllt -->
+</div>
+  </div>
+</body>
+</html>

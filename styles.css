@@ -1,0 +1,150 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #6fff4f;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  cursor: none;
+}
+
+.show-cursor {
+  cursor: default !important;
+}
+
+.scrollband {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 140px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.scrolling-band {
+  transition: opacity 1s ease;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 1;
+}
+
+.scrolling-band.gold {
+  background: linear-gradient(to bottom, #ffd700, #ffcc00);
+}
+
+.scrolling-band.silver {
+  background: linear-gradient(to bottom, #dcdcdc, #c0c0c0);
+}
+
+.scrolling-band.bronze {
+  background: linear-gradient(to bottom, #cd7f32, #a0522d);
+}
+
+.scrolling-wrapper {
+  display: flex;
+  width: max-content;
+  animation: scroll var(--scroll-duration, 60s) linear infinite;
+  animation-delay: var(--scroll-delay, 0s);
+}
+
+.scrolling-logos {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin: 0 var(--gap, 30px);
+  border-radius: 12px;
+  height: 100%;
+}
+
+.logo-wrapper img {
+  height: 100px;
+  object-fit: contain;
+  max-width: 200px;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.config-trigger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  z-index: 1000;
+}
+
+.config-panel {
+  position: absolute;
+  top: 0;
+  left: -320px;
+  width: 300px;
+  height: 100%;
+  background: #2c2c2e;
+  padding: 20px;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease, opacity 0.3s ease;
+  z-index: 999;
+  color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-20px);
+}
+
+.config-panel.visible {
+  left: 0;
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0);
+}
+
+.config-panel h3 {
+  margin-top: 0;
+  font-size: 18px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.config-panel label {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.config-panel input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 6px;
+  background-color: #444;
+  color: #fff;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.config-panel button {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background-color: #007aff;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
