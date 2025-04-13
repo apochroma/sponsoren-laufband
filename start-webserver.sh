@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Generiere aktuelles manifest.json ..."
+./manifest.sh
 echo "Starte lokalen Webserver unter http://localhost:8000"
 
 # Stelle sicher, dass du im richtigen Ordner bist
