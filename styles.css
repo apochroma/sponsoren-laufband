@@ -183,3 +183,13 @@ html, body {
 .show-logo {
   animation: logoAnimation 17s ease-in-out forwards;
 }
+
+.logo-fixed {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  z-index: 500;
+  opacity: 0.9;
+}
