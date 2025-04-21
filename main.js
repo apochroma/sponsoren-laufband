@@ -27,9 +27,9 @@ async function loadConfigAndImages() {
   }
 
   const sponsorCategories = [
-    { key: 'gold', path: 'media/01_gold/', className: 'gold', repeat: 3, label: 'Wir danken unseren Gold Sponsoren' },
-    { key: 'silver', path: 'media/02_silber/', className: 'silver', repeat: 2, label: 'Wir danken unseren Silber Sponsoren' },
-    { key: 'bronze', path: 'media/03_bronze/', className: 'bronze', repeat: 1, label: 'Wir danken unseren Bronze Sponsoren' }
+    { key: 'gold', path: 'media/01_gold/', className: 'gold', repeat: 3, label: 'Wir danken unseren Sponsoren' },
+    { key: 'silver', path: 'media/02_silber/', className: 'silver', repeat: 2, label: 'Wir danken unseren Sponsoren' },
+    { key: 'bronze', path: 'media/03_bronze/', className: 'bronze', repeat: 1, label: 'Wir danken unseren Sponsoren' }
   ];
 
   const bands = sponsorCategories.map(category => {
