@@ -36,4 +36,4 @@ for i in "${!folders[@]}"; do
 done
 
 echo "}" >> "$output"
-echo "✅ manifest.json wurde erfolgreich erstellt."
+echo "manifest.json wurde erfolgreich erstellt."

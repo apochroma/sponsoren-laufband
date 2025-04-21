@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd "$(dirname "$0")"
 echo "Generiere aktuelles manifest.json ..."
 ./manifest.sh
 echo "Starte lokalen Webserver unter http://localhost:8000"
