@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Logo Animation</title>
+  <style>
+    html, body {
+      margin: 0;
+      background: black;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes totalAnimation {
+      0% {
+        transform: scale(0.1) rotate(0deg);
+        opacity: 0;
+      }
+      30% {
+        transform: scale(1) rotate(1080deg); /* 3 volle Umdrehungen */
+        opacity: 1;
+      }
+      80% {
+        transform: scale(1) rotate(1080deg); /* bleibt in dieser Position */
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1) rotate(1080deg); /* bleibt gedreht */
+        opacity: 0;
+      }
+    }
+
+    .logo {
+      width: 80vmin;
+      height: 80vmin;
+      animation: totalAnimation 17s ease-in-out forwards;
+    }
+  </style>
+</head>
+<body>
+  <img src="media/Youtube.png" alt="Youtube Logo" class="logo">
+</body>
+</html>

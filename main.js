@@ -142,3 +142,22 @@ function hidePanel() {
 }
 
 window.onload = loadConfigAndImages;
+
+// 🔥 Dynamische Logo-Einblendung mit Animation bei Taste „r“
+document.addEventListener('keydown', (e) => {
+  if (e.key.toLowerCase() === 'r') {
+    // Falls schon vorhanden: entfernen
+    const existing = document.getElementById('main-logo');
+    if (existing) existing.remove();
+
+    // Neues Logo erzeugen
+    const logo = document.createElement('img');
+    logo.src = 'media/Youtube.png'; // <== passe ggf. den Pfad an
+    logo.alt = 'Youtube Logo';
+    logo.id = 'main-logo';
+    logo.className = 'logo show-logo';
+
+    // Zum DOM hinzufügen
+    document.body.appendChild(logo);
+  }
+});

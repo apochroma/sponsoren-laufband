@@ -148,3 +148,38 @@ html, body {
   border-radius: 6px;
   cursor: pointer;
 }
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80vmin;
+  height: 80vmin;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2000;
+}
+
+@keyframes logoAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(0.1) rotate(0deg);
+    opacity: 0;
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(1) rotate(1080deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(1) rotate(1080deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(1080deg);
+    opacity: 0;
+  }
+}
+
+.show-logo {
+  animation: logoAnimation 17s ease-in-out forwards;
+}
